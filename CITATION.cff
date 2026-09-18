@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: ANKUSI Wheel Fitment Dataset
+message: >-
+  If you use this dataset, please cite it using the metadata below and keep a
+  visible link back to the canonical page, as required by CC BY 4.0.
+type: dataset
+authors:
+  - name: ANKUSI Wheels Engineering Team
+    website: 'https://ankusiwheels.com/'
+    city: Guangzhou
+    country: CN
+abstract: >-
+  Open, machine-readable factory wheel specifications for 6,436 vehicle variants
+  across 129 makes and 46 bolt patterns, model years 1940 to 2027. Fields include
+  bolt pattern, centre bore in millimetres, lug count, OE wheel size and offset,
+  plus commonly referenced flush and maximum aftermarket sizes. Compiled from
+  published OEM specifications and cross-checked against independent fitment
+  references.
+keywords:
+  - wheel fitment
+  - bolt pattern
+  - PCD
+  - centre bore
+  - wheel offset
+  - automotive
+  - open data
+license: CC-BY-4.0
+url: 'https://ankusiwheels.com/wheel-fitment-dataset/'
+version: 2026.09.18
+date-released: '2026-09-18'
