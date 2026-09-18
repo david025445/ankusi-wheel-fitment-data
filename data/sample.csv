@@ -1,0 +1,51 @@
+make,model,year,chassis_code,bolt_pattern,center_bore_mm,lug_count,oe_wheel,flush_wheel,max_wheel,source_url
+BMW,BMW 02-Serie E10,1966,E10,4x100,57.1,4,13x4.5J F/R,15x7.0J ET25,15x8.0J ET15,https://ankusiwheels.com/fitment-guide/bmw-02-serie-e10-1966/
+BMW,BMW 1-Series 3-door E81,2008,E81,5x120,72.6,5,F: 16x7.0J R: 16x7.0J,,,https://ankusiwheels.com/fitment-guide/bmw-1-series-3-door-e81-2008/
+BMW,BMW 1-Series 3-door F21,2013,F21,5x120,72.6,5,F: 16x7.0J R: 16x7.0J,,,https://ankusiwheels.com/fitment-guide/bmw-1-series-3-door-f21-2013/
+Mercedes-Benz,Mercedes-Benz 300 CE 6.3 AMG,1988,,5x112,66.6,5,F: 16x8.0J R: 16x9.0J,,,https://ankusiwheels.com/fitment-guide/mercedes-benz-300-ce-6-3-amg/
+Mercedes-Benz,Mercedes-Benz 500E,1991,,5x112,66.6,5,F: 16x8.0J R: 16x8.0J,17x8.0J ET25,17x8.5J ET20,https://ankusiwheels.com/fitment-guide/mercedes-benz-500e/
+Mercedes-Benz,Mercedes-Benz 600 SEL W140,1991,,5x112,66.6,5,F: 16x8.0J R: 16x8.0J,17x8.5J ET30,18x9.0J ET25,https://ankusiwheels.com/fitment-guide/mercedes-benz-600-sel-w140/
+Audi,Audi 100 Avant quattro,1984,,4x108,57.1,4,14x6.0J F/R,15x7.0J ET35,16x7.5J ET30,https://ankusiwheels.com/fitment-guide/audi-100-avant-quattro/
+Audi,Audi 100 GL Saloon,1972,,4x108,57.1,4,14x5.0J F/R,15x6.0J ET35,16x6.5J ET30,https://ankusiwheels.com/fitment-guide/audi-100-gl-saloon/
+Audi,Audi 200,1998,,5x112,57.1,5,15x6.0J F/R,16x7.5J ET35,17x8.0J ET30,https://ankusiwheels.com/fitment-guide/audi-200/
+Toyota,GR Supra MkV Final Edition,2026,,5x112,66.6,5,F 19x9.0J ET32 / R 19x10.0J ET40,,,https://ankusiwheels.com/fitment-guide/toyota-gr-supra-mkv-final-edition/
+Toyota,GR86 Yuzu Edition,2026,,5x100,56.1,5,18x7.5J at ET48 offset (front and rear),18x8.5J ET35,18x9.0J ET30,https://ankusiwheels.com/fitment-guide/toyota-gr86-yuzu-edition/
+Toyota,Toyota 4Runner,2009,,6x139.7,106.1,6,"F/R: 16x7.0J at ET15 offset, front and rear",17x8.0J ET0,18x8.5J ET-5,https://ankusiwheels.com/fitment-guide/toyota-4runner-2009/
+Ford,F-150 Lobo,2025,,6x135,87.1,6,22x9.0J at ET44 offset (front and rear),22x10.0J ET30,22x10.5J ET25,https://ankusiwheels.com/fitment-guide/ford-f-150-lobo/
+Ford,Ford Bronco 2-door,2021,,6x139.7,93.1,6,17x7.5J F/R,17x8.5J ET25,18x9.0J ET18,https://ankusiwheels.com/fitment-guide/ford-bronco-2-door/
+Ford,Ford Bronco 2-door Heritage Edition,2023,,6x139.7,93.1,6,17x7.5J F/R,17x8.5J ET25,18x9.0J ET18,https://ankusiwheels.com/fitment-guide/ford-bronco-2-door-heritage-edition-2023/
+Honda,Honda Accord,2025,,5x114.3,64.1,5,"19x8.5J at ET50 offset, front and rear",19x8.5J ET45,20x9.0J ET38,https://ankusiwheels.com/fitment-guide/honda-accord/
+Honda,Honda Accord EuroR,1998-2004,,5x114.3,64.1,5,"17x7.0J at ET55 offset, front and rear",17x8.0J ET42,17x8.0J ET37,https://ankusiwheels.com/fitment-guide/honda-accord-euror/
+Honda,Honda Accord PHEV,2014-2017,,5x114.3,64.1,5,"17x7.5J at ET50 offset, front and rear",17x7.5J ET48,17x7.5J ET42,https://ankusiwheels.com/fitment-guide/honda-accord-phev/
+Tesla,Tesla Cybertruck,2025,,6x139.7,84.1,6,"20x9.0J at ET58.5 offset, front and rear",20x9.0J ET45,20x10.0J ET35,https://ankusiwheels.com/fitment-guide/tesla-cybertruck/
+Tesla,Tesla Model 3,2018,,5x114.3,64.1,5,"18x8.5J at ET40 offset, front and rear",19x8.5J ET35,19x9.5J ET30,https://ankusiwheels.com/fitment-guide/tesla-model-3-2018/
+Tesla,Tesla Model 3,2024,,5x114.3,64.1,5,"18x8.5J at ET40 offset, front and rear",19x8.5J ET35,19x9.5J ET30,https://ankusiwheels.com/fitment-guide/tesla-model-3-2024/
+Porsche,Porsche 718 Cayman,2017,,5x130,71.6,5,F: 18x8.0J R: 18x9.5J,,,https://ankusiwheels.com/fitment-guide/porsche-718-cayman/
+Porsche,Porsche 718 Spyder,2016-2020,,5x130,71.6,5,F: 20x8.5J R: 20x11.0J,,,https://ankusiwheels.com/fitment-guide/porsche-718-spyder/
+Porsche,Porsche 901,1963,,5x130,71.6,5,15x4.5J,15x6J ET36,15x7J ET23,https://ankusiwheels.com/fitment-guide/porsche-901/
+Volkswagen,Volkswagen Golf GTI,2025,,5x112,57.1,5,"18x7.5J at ET51 offset, front and rear",18x8.5J ET45,19x8.5J ET40,https://ankusiwheels.com/fitment-guide/volkswagen-golf-gti/
+Volkswagen,Volkswagen Golf R,2025,,5x112,57.1,5,F/R 19x8.0J,19x9.0J ET40,20x9.5J ET35,https://ankusiwheels.com/fitment-guide/volkswagen-golf-r/
+Volkswagen,Volkswagen Tiguan,2025,,5x112,57.1,5,"18x7.5J at ET43 offset, front and rear",19x8.5J ET40,20x9.0J ET35,https://ankusiwheels.com/fitment-guide/volkswagen-tiguan/
+Lexus,IS 350,2026,,5x114.3,60.1,5,F 19x8.5J ET45 / R 19x9.5J ET50,,,https://ankusiwheels.com/fitment-guide/lexus-is-350/
+Lexus,Lexus CT 200h,2011-2018,,5x100,54.1,5,"17x7.0J at ET45 offset, front and rear",17x8.0J ET35,18x9.0J ET30,https://ankusiwheels.com/fitment-guide/lexus-ct-200h/
+Lexus,Lexus ES,2001-2026,,5x114.3,60.1,5,"18x8.0J at ET45 offset, front and rear",18x8.0J ET40,18x8.5J ET35,https://ankusiwheels.com/fitment-guide/lexus-es/
+Jeep,Jeep Avenger,2027,,4x108,65.1,4,18x7J,18x8J ET25,19x8J ET20,https://ankusiwheels.com/fitment-guide/jeep-avenger/
+Jeep,Jeep CJ-7 Renegade,1977,,5x139.7,108,5,15x7J,15x8J ET-12,15x10J ET-25,https://ankusiwheels.com/fitment-guide/jeep-cj-7-renegade/
+Jeep,Jeep Cherokee,1974,,6x139.7,108,6,15x7J,15x8J ET-12,15x10J ET-25,https://ankusiwheels.com/fitment-guide/jeep-cherokee-1974/
+Nissan,Nissan 240Z,1970,,4x114.3,73.1,4,"14x4.5J at ET15 offset, front and rear",,,https://ankusiwheels.com/fitment-guide/nissan-240z/
+Nissan,Nissan 300ZX Turbo,1983,,5x114.3,66.1,5,"15x6.5J at ET30 offset, front and rear",,,https://ankusiwheels.com/fitment-guide/nissan-300zx-turbo/
+Nissan,Nissan 300ZX Twin-Turbo,1989,,5x114.3,66.1,5,F: 16x7.5J R: 16x8.5J,,,https://ankusiwheels.com/fitment-guide/nissan-300zx-twin-turbo/
+Chevrolet,Camaro Collectors Edition,2024,,5x120,66.9,5,F 20x10.0J ET20 / R 20x11.0J ET43,,,https://ankusiwheels.com/fitment-guide/chevrolet-camaro-collectors-edition/
+Chevrolet,Chevrolet Agile,2010,,4x100,56.6,4,"15x6.0J at ET45 offset, front and rear",16x7.0J ET38,17x7.5J ET35,https://ankusiwheels.com/fitment-guide/chevrolet-agile/
+Chevrolet,Chevrolet Astra 2.0 Flexpower Comfort,2005,,4x100,56.6,4,15x6.0J F/R,16x7.0J ET40,17x7.5J ET35,https://ankusiwheels.com/fitment-guide/chevrolet-astra-2-0-flexpower-comfort-2005/
+Land Rover,Land Rover Defender,2013,,5x165.1,114.3,5,16x7J,16x8J ET10,18x9J ET0,https://ankusiwheels.com/fitment-guide/land-rover-defender/
+Land Rover,Land Rover Defender 110,2020,,5x120,72.6,5,20x8.5J,21x9.5J ET30,22x10J ET25,https://ankusiwheels.com/fitment-guide/land-rover-defender-110/
+Land Rover,Land Rover Defender 130 Outbound,2024,,5x120,72.6,5,20x8.5J,20x9.5J ET30,20x10J ET25,https://ankusiwheels.com/fitment-guide/land-rover-defender-130-outbound/
+Kia,Kia Cadenza,2014,,5x114.3,67.1,5,19x8.0J F/R,20x8.5J ET35,20x9.0J ET32,https://ankusiwheels.com/fitment-guide/kia-cadenza-2014/
+Kia,Kia Cadenza,2017,,5x114.3,67.1,5,19x8.0J F/R,20x8.5J ET35,20x9.0J ET32,https://ankusiwheels.com/fitment-guide/kia-cadenza-2017/
+Kia,Kia Cadenza,2020,,5x114.3,67.1,5,19x8.0J F/R,20x8.5J ET38,20x9.0J ET32,https://ankusiwheels.com/fitment-guide/kia-cadenza-2020/
+Hyundai,Ioniq 5 N [US],2025,,5x114.3,67.1,5,21x9.5J at ET40 offset (front and rear),21x10.0J ET35,21x10.5J ET30,https://ankusiwheels.com/fitment-guide/hyundai-ioniq-5-n-us/
+Subaru,BRZ tS,2024,,5x100,56.1,5,18x7.5J at ET48 offset (front and rear),18x8.5J ET35,18x9.0J ET30,https://ankusiwheels.com/fitment-guide/subaru-brz-ts/
+Subaru,Subaru Outback,2025,,5x114.3,56.1,5,"18x7.0J at ET48 offset, front and rear",18x8.5J ET45,18x9.0J ET40,https://ankusiwheels.com/fitment-guide/subaru-outback/
+Subaru,Subaru WRX,2025,,5x114.3,56.1,5,"18x8.5J at ET55 offset, front and rear",18x9.5J ET38,18x9.5J ET22,https://ankusiwheels.com/fitment-guide/subaru-wrx/
+Mazda,Mazda 2 Hybrid,2026,,4x100,54.1,4,"16x6.0J at ET45 offset, front and rear",17x7.0J ET38,18x7.5J ET35,https://ankusiwheels.com/fitment-guide/mazda-2-hybrid/
