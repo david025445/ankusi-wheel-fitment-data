@@ -77,6 +77,14 @@ Structured citation: see `CITATION.cff`.
 
 Found a record that does not match a factory placard or service manual? Open an issue with the vehicle, the model year and your source. Corrections are applied to both the dataset and the underlying guide.
 
+## Mirrors
+
+The same dataset, published elsewhere for convenience:
+
+- Canonical page and downloads: https://ankusiwheels.com/wheel-fitment-dataset/
+- Hugging Face (dataset viewer, `datasets` loader): https://huggingface.co/datasets/hjhjhihg1/ankusi-wheel-fitment-data
+- Kaggle (column documentation, notebook-ready): https://www.kaggle.com/datasets/ankusiwheelsdavid/wheel-bolt-pattern-and-centre-bore-6436-cars
+
 ## Who maintains this
 
 The engineering team at [ANKUSI Wheels](https://ankusiwheels.com/wholesale/), an IATF 16949 and ISO 9001 certified forged wheel manufacturer in Guangzhou, China.
