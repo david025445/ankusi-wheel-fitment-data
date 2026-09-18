@@ -84,6 +84,7 @@ The same dataset, published elsewhere for convenience:
 - Canonical page and downloads: https://ankusiwheels.com/wheel-fitment-dataset/
 - Hugging Face (dataset viewer, `datasets` loader): https://huggingface.co/datasets/hjhjhihg1/ankusi-wheel-fitment-data
 - Kaggle (column documentation, notebook-ready): https://www.kaggle.com/datasets/ankusiwheelsdavid/wheel-bolt-pattern-and-centre-bore-6436-cars
+- figshare (permanent DOI, citable in papers): https://doi.org/10.6084/m9.figshare.33921994
 
 ## Who maintains this
 
