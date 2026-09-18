@@ -88,7 +88,7 @@ The same dataset, published elsewhere for convenience:
 
 ## Who maintains this
 
-The engineering team at [ANKUSI Wheels](https://ankusiwheels.com/wholesale/), an IATF 16949 and ISO 9001 certified forged wheel manufacturer in Guangzhou, China.
+The engineering team at [ANKUSI Wheels](https://ankusiwheels.com/wholesale/). ANKUSI is the brand and export arm; the wheels are produced at Taizhou Hantuo Automotive Parts Co., Ltd (Jiangsu, China), which holds IATF 16949:2016 (TUV Saarland, certificate CB01839, IATF registration 0572069) and ISO 9001:2015, scope "design and manufacture of wheel hubs, with product design responsibility".
 
 ## Licence
 
