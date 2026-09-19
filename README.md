@@ -1,12 +1,12 @@
 # ANKUSI Wheel Fitment Dataset
 
-Open, machine-readable factory wheel specifications — bolt pattern, centre bore, lug count and OE wheel size — for **6,427 vehicle variants** across **128 makes** and **46 bolt patterns**, model years **1940–2027**.
+Open, machine-readable factory wheel specifications — bolt pattern, centre bore, lug count and OE wheel size — for **7,583 vehicle variants** across **130 makes** and **46 bolt patterns**, model years **1940–2027**.
 
 Released under **CC BY 4.0**. Free to use, copy, adapt and build on, including commercially, as long as you credit the source.
 
 **Canonical page:** https://ankusiwheels.com/wheel-fitment-dataset/
 
-**Current version:** 2026.09.19 — see [Version history](#version-history-and-correction-log) below.
+**Current version:** 2026.09.19b — see [Version history](#version-history-and-correction-log) below.
 
 ---
 
@@ -20,8 +20,8 @@ Full data files are hosted on the canonical page so they always match the publis
 
 | File | Format | Size | Download |
 |---|---|---|---|
-| `ankusi-wheel-fitment.csv` | CSV, UTF-8 with BOM | ~930 KB | https://ankusiwheels.com/wp-content/uploads/dataset/ankusi-wheel-fitment.csv |
-| `ankusi-wheel-fitment.json` | JSON + metadata + changelog | ~2.0 MB | https://ankusiwheels.com/wp-content/uploads/dataset/ankusi-wheel-fitment.json |
+| `ankusi-wheel-fitment.csv` | CSV, UTF-8 with BOM | ~1.1 MB | https://ankusiwheels.com/wp-content/uploads/dataset/ankusi-wheel-fitment.csv |
+| `ankusi-wheel-fitment.json` | JSON + metadata + changelog | ~2.4 MB | https://ankusiwheels.com/wp-content/uploads/dataset/ankusi-wheel-fitment.json |
 | `CHANGELOG.json` | JSON | small | https://ankusiwheels.com/wp-content/uploads/dataset/CHANGELOG.json |
 
 A 50-row sample lives in `data/sample.csv` so you can check the shape before downloading.
@@ -67,6 +67,18 @@ Records are built from published OEM wheel and tyre specifications and cross-che
 `flush_wheel` and `max_wheel` are reference starting points collected from documented builds on each platform — they are **not** manufacturer approvals. Clearance always has to be verified on the individual car: brake package, suspension, tyre profile and ride height all change the outcome.
 
 ## Version history and correction log
+
+### 2026.09.19b
+
+Expansion: 1,156 variants added after the same two-source verification (wheel-size.com centre-bore distribution pages plus avtoreference.com; 278 model groups confirmed by both, 42 confirmed by wheel-size.com only where avtoreference has no entry, 9 by avtoreference only). Added: Buick 462, Geely 415, Porsche 332 (classic 356 / 914 / 924 / 928 / 944 / 968 and current 911 / 718 / Cayenne / Macan / Panamera / Taycan families), Rolls-Royce 69, Lamborghini 10, plus smaller additions across other makes.
+
+Corrected before inclusion (7): Porsche Macan Electric 2025-2026 (Macan 4 / 4S / Turbo / GTS / base) — source pages carried 5x112; verified 5x130 / 66.5 against wheel-size.com, avtoreference.com and an aftermarket wheel supplier listing.
+
+Centre bore withheld pending verification (13): Buick Cascada 2016-2019 (sources disagree, 70.2 vs 70.3); Geely Vision FC2 / FC3 2014-2022 (source page lists both 54.1 and 60.1).
+
+Not included (29): 21 single-source records (Buick Rendezvous 2002-2007, Buick Velite 5 / 6 / 7) held until a second reference is found; 8 racing / bespoke centre-lock builds with no road bolt pattern. 120 centre-lock and competition variants remain outside the dataset by design.
+
+Record count 6,427 → 7,583; makes 128 → 130.
 
 ### 2026.09.19
 
