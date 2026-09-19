@@ -10,12 +10,13 @@ authors:
     city: Guangzhou
     country: CN
 abstract: >-
-  Open, machine-readable factory wheel specifications for 6,436 vehicle variants
-  across 129 makes and 46 bolt patterns, model years 1940 to 2027. Fields include
-  bolt pattern, centre bore in millimetres, lug count, OE wheel size and offset,
-  plus commonly referenced flush and maximum aftermarket sizes. Compiled from
-  published OEM specifications and cross-checked against independent fitment
-  references.
+  Open, machine-readable factory wheel specifications for 6,427 vehicle variants
+  across 128 makes and 46 bolt patterns, model years 1940 to 2027. Fields include
+  bolt pattern, centre bore in millimetres (front and, where different, rear),
+  lug count, OE wheel size and offset, plus commonly referenced flush and maximum
+  aftermarket sizes. Compiled from published OEM specifications and cross-checked
+  against independent fitment references; records where sources disagree are
+  withheld rather than guessed. Corrections are logged in the README.
 keywords:
   - wheel fitment
   - bolt pattern
@@ -26,5 +27,8 @@ keywords:
   - open data
 license: CC-BY-4.0
 url: 'https://ankusiwheels.com/wheel-fitment-dataset/'
-version: 2026.09.18
-date-released: '2026-09-18'
+identifiers:
+  - type: doi
+    value: 10.6084/m9.figshare.33921994
+version: 2026.09.19
+date-released: '2026-09-19'
