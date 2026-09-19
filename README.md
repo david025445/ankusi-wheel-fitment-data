@@ -1,10 +1,12 @@
 # ANKUSI Wheel Fitment Dataset
 
-Open, machine-readable factory wheel specifications — bolt pattern, centre bore, lug count and OE wheel size — for **6,436 vehicle variants** across **129 makes** and **46 bolt patterns**, model years **1940–2027**.
+Open, machine-readable factory wheel specifications — bolt pattern, centre bore, lug count and OE wheel size — for **6,427 vehicle variants** across **128 makes** and **46 bolt patterns**, model years **1940–2027**.
 
 Released under **CC BY 4.0**. Free to use, copy, adapt and build on, including commercially, as long as you credit the source.
 
 **Canonical page:** https://ankusiwheels.com/wheel-fitment-dataset/
+
+**Current version:** 2026.09.19 — see [Version history](#version-history-and-correction-log) below.
 
 ---
 
@@ -18,8 +20,9 @@ Full data files are hosted on the canonical page so they always match the publis
 
 | File | Format | Size | Download |
 |---|---|---|---|
-| `ankusi-wheel-fitment.csv` | CSV, UTF-8 with BOM | ~926 KB | https://ankusiwheels.com/wp-content/uploads/dataset/ankusi-wheel-fitment.csv |
-| `ankusi-wheel-fitment.json` | JSON + metadata | ~2.9 MB | https://ankusiwheels.com/wp-content/uploads/dataset/ankusi-wheel-fitment.json |
+| `ankusi-wheel-fitment.csv` | CSV, UTF-8 with BOM | ~930 KB | https://ankusiwheels.com/wp-content/uploads/dataset/ankusi-wheel-fitment.csv |
+| `ankusi-wheel-fitment.json` | JSON + metadata + changelog | ~2.0 MB | https://ankusiwheels.com/wp-content/uploads/dataset/ankusi-wheel-fitment.json |
+| `CHANGELOG.json` | JSON | small | https://ankusiwheels.com/wp-content/uploads/dataset/CHANGELOG.json |
 
 A 50-row sample lives in `data/sample.csv` so you can check the shape before downloading.
 
@@ -32,14 +35,15 @@ A 50-row sample lives in `data/sample.csv` so you can check the shape before dow
 | `year` | integer | Model year the record describes | `2025` |
 | `chassis_code` | string | Manufacturer chassis / platform code where published | `G20` |
 | `bolt_pattern` | string | Bolt circle: stud count × pitch circle diameter in mm | `5x112` |
-| `center_bore_mm` | decimal | Hub bore diameter in millimetres | `66.6` |
+| `center_bore_mm` | decimal | Hub bore diameter in millimetres (front hub where the axles differ) | `66.6` |
+| `center_bore_rear_mm` | decimal | Rear hub bore in millimetres, filled only where the rear hub differs from the front (e.g. BMW E70/E71: 74.1 front / 72.6 rear; Honda S2000: 70.1 / 64.1); blank otherwise. Added in 2026.09.19 | `72.6` |
 | `lug_count` | integer | Number of studs or bolts | `5` |
 | `oe_wheel` | string | Factory wheel size and offset as published by the manufacturer | `18x8.0J at ET34 offset, front and rear` |
 | `flush_wheel` | string | Commonly used flush-fitment reference size and offset | `19x8.5J ET35` |
 | `max_wheel` | string | Maximum aggressive reference size and offset before clearance work | `19x9.0J ET28` |
 | `source_url` | string | Canonical page the record is published on | `https://ankusiwheels.com/fitment-guide/bmw-3-series-g20-2025/` |
 
-Empty strings mean "not published for this variant", not zero. Competition and centre-lock variants intentionally carry no `center_bore_mm`.
+Empty strings mean "not published for this variant", not zero. Competition and centre-lock variants intentionally carry no `center_bore_mm`; a blank `center_bore_mm` on a road car means the figure is withheld pending verification (see the correction log).
 
 ## Quick start
 
@@ -62,6 +66,38 @@ Records are built from published OEM wheel and tyre specifications and cross-che
 
 `flush_wheel` and `max_wheel` are reference starting points collected from documented builds on each platform — they are **not** manufacturer approvals. Clearance always has to be verified on the individual car: brake package, suspension, tyre profile and ride height all change the outcome.
 
+## Version history and correction log
+
+### 2026.09.19
+
+Anomaly audit of 190 flagged records (39 rare bolt-pattern / centre-bore combinations, 166 brand outliers, 12 blank centre bores), each re-checked against at least two of: wheel-size.com, wheelfitment.eu, wheel-sizes.com, avtoreference.com and marque owner forums.
+
+Corrected (9):
+
+| Vehicle | Field | Was | Now |
+|---|---|---|---|
+| Alfa Romeo 8C Spider (2009) | bolt_pattern / center_bore_mm | 5x114.3 / 70.5 | 5x110 / 65.1 |
+| Chrysler Delta (2012) | bolt_pattern / center_bore_mm | 4x100 / 56.6 | 4x98 / 58.1 |
+| Daihatsu Hijet (1997) | center_bore_mm | 66 | 66.1 |
+| Opel Rocks-e (2022) | bolt_pattern / center_bore_mm | 4x100 / 60.1 | 4x108 / 65.1 |
+| Peugeot Landtrek (2025) | center_bore_mm | 100.1 | 106.1 |
+| Peugeot Pick Up (2018) | center_bore_mm | 100.1 | 108.1 |
+| Vauxhall Insignia Country Tourer (2018) | center_bore_mm | 70.1 | 70.2 |
+| Vauxhall Insignia Sports Tourer (2018) | center_bore_mm | 70.1 | 70.2 |
+| Volvo EM90 (2024) | center_bore_mm | 63.3 | 63.4 |
+
+New column `center_bore_rear_mm` for the 9 records with a staggered hub bore (BMW X5 M E70 2010; BMW X6 E71 2009/2013, X6 E71 [UK] 2009, X6 ActiveHybrid E71 2010, X6 M E71 2010, X6 M50d E71 2013; Hamann BMW X6 2009; Honda S2000 2008-2009). These previously exported with a blank centre bore.
+
+Centre bore withheld pending verification (8): Ford E-Series 2008; Hummer Humvee 2003; Lamborghini Jalpa 1981; Lamborghini Temerario 2025 and Temerario Ad Personam 2026; Lotus Esprit V8 2002; Oldsmobile Cutlass 1961; Porsche 914-4 1970.
+
+Records withdrawn pending verification (9): Alfa Romeo TZ3 Stradale 2011; Cadillac Celestiq 2024; Iveco Campagnola 2009; Iveco Massif 2008; Renault 4 CV 1948 / 4 CV Luxe 1950 / 4 CV Sport 1954; Renault Dauphine 1961; Renault Floride 1960.
+
+Record count 6,436 → 6,427.
+
+### 2026.09.18
+
+Initial public release, 6,436 records.
+
 ## Attribution
 
 CC BY 4.0 requires appropriate credit. A visible credit with a link back:
@@ -75,7 +111,7 @@ Structured citation: see `CITATION.cff`.
 
 ## Corrections
 
-Found a record that does not match a factory placard or service manual? Open an issue with the vehicle, the model year and your source. Corrections are applied to both the dataset and the underlying guide.
+Found a record that does not match a factory placard or service manual? Open an issue with the vehicle, the model year and your source. Corrections are applied to both the dataset and the underlying guide, and logged above.
 
 ## Mirrors
 
@@ -85,6 +121,7 @@ The same dataset, published elsewhere for convenience:
 - Hugging Face (dataset viewer, `datasets` loader): https://huggingface.co/datasets/hjhjhihg1/ankusi-wheel-fitment-data
 - Kaggle (column documentation, notebook-ready): https://www.kaggle.com/datasets/ankusiwheelsdavid/wheel-bolt-pattern-and-centre-bore-6436-cars
 - figshare (permanent DOI, citable in papers): https://doi.org/10.6084/m9.figshare.33921994
+- Wikidata item: https://www.wikidata.org/wiki/Q141498663
 
 ## Who maintains this
 
