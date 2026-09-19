@@ -1,12 +1,12 @@
 # ANKUSI Wheel Fitment Dataset
 
-Open, machine-readable factory wheel specifications — bolt pattern, centre bore, lug count and OE wheel size — for **7,583 vehicle variants** across **130 makes** and **46 bolt patterns**, model years **1940–2027**.
+Open, machine-readable factory wheel specifications — bolt pattern, centre bore, lug count and OE wheel size — for **7,603 vehicle variants** across **130 makes** and **46 bolt patterns**, model years **1940–2027**.
 
 Released under **CC BY 4.0**. Free to use, copy, adapt and build on, including commercially, as long as you credit the source.
 
 **Canonical page:** https://ankusiwheels.com/wheel-fitment-dataset/
 
-**Current version:** 2026.09.19b — see [Version history](#version-history-and-correction-log) below.
+**Current version:** 2026.09.20 — see [Version history](#version-history-and-correction-log) below.
 
 ---
 
@@ -67,6 +67,24 @@ Records are built from published OEM wheel and tyre specifications and cross-che
 `flush_wheel` and `max_wheel` are reference starting points collected from documented builds on each platform — they are **not** manufacturer approvals. Clearance always has to be verified on the individual car: brake package, suspension, tyre profile and ride height all change the outcome.
 
 ## Version history and correction log
+
+### 2026.09.20
+
+Consistency pass over the full dataset: flush/maximum offset ordering, model-year ranges and factory wheel sizes were checked programmatically, and every flag was re-verified against wheel-size.com and avtoreference.com before a change was made.
+
+Factory wheel size corrected (20 records): Lamborghini Murciélago, all 9 variants 2002–2010 (F 18x8.5J ET42 / R 18x13J ET40 → F ET58 / R ET15; the ET42 figure belonged to the Gallardo); Lamborghini Reventón and Reventón Roadster (→ F 18x8.5J ET60 / R 18x13J ET15); Mercedes-AMG GT S F1 and DTM safety cars (F 19x9J ET35 / R 20x11J ET40 → F ET58 / R ET68); Mercury Marauder 2003 (F 18x8J ET6.35 / R 18x9.5J ET6.35 → 18x8J ET50 front and rear); Ford Taurus SHO 2013 (20x8J ET55 → ET39); Rover 100 1994 (13x4.5J ET35 → ET52); Nissan Titan 2017/2020, Titan King Cab 2017 and Titan Single Cab 2017 (ET44 → 20x8.0J ET23 / 18x8.0J ET25). The aftermarket flush and maximum references on these 20 records were written against the old offset and are blank in this release pending re-verification.
+
+Model-year range corrected (7): Honda e 2006–2023 → 2020–2023; Honda HR-V 2008–2019 → 2015–2022; Honda Prelude 1997–2008 → 1997–2001; Honda Accord Euro R 1998–2004 → 2002–2008; Lexus NX 2010–2025 → 2015–2025; Lexus RC F Sport 2013–2026 → 2015–2025; Lincoln MKZ 2013–2022 → 2013–2020.
+
+Flush and maximum references swapped (4): Scion xB 2008; Porsche Boxster S 2001, 2002, 2003 (the "maximum" set sat further inboard than the "flush" set).
+
+Centre bore reinstated (13): Buick Cascada 2016–2019 (70.3 mm, confirmed by wheel-size.com and wheel-sizes.com after one reference listed 70.2); Geely Vision FC2 2014–2018 and FC3 2019–2022 (60.1 mm — the earlier "conflict" came from an automated lookup that matched the wrong Geely model, Vision X3).
+
+Added (20): Buick Rendezvous 2002–2007 (second reference: wheel-sizes.com), Buick Velite 5 2017–2018, Velite 6 2019–2026 and Velite 7 2020–2023 (second reference: wheel-size.com).
+
+Still withheld: the 8 centre bores and 9 withdrawn records from 2026.09.19; Buick Rendezvous 2001 (model year not confirmed).
+
+Record count 7,583 → 7,603.
 
 ### 2026.09.19b
 
