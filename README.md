@@ -1,12 +1,12 @@
 # ANKUSI Wheel Fitment Dataset
 
-Open, machine-readable factory wheel specifications — bolt pattern, centre bore, lug count and OE wheel size — for **7,603 vehicle variants** across **130 makes** and **46 bolt patterns**, model years **1940–2027**.
+Open, machine-readable factory wheel specifications — bolt pattern, centre bore, lug count and OE wheel size — for **9,688 vehicle variants** across **167 makes** and **52 bolt patterns**, model years **1940–2027**.
 
 Released under **CC BY 4.0**. Free to use, copy, adapt and build on, including commercially, as long as you credit the source.
 
 **Canonical page:** https://ankusiwheels.com/wheel-fitment-dataset/
 
-**Current version:** 2026.09.20 — see [Version history](#version-history-and-correction-log) below.
+**Current version:** 2026.09.22 — see [Version history](#version-history-and-correction-log) below. below.
 
 ---
 
@@ -43,6 +43,7 @@ A 50-row sample lives in `data/sample.csv` so you can check the shape before dow
 | `max_wheel` | string | Maximum aggressive reference size and offset before clearance work | `19x9.0J ET28` |
 | `source_url` | string | Canonical page the record is published on | `https://ankusiwheels.com/fitment-guide/bmw-3-series-g20-2025/` |
 
+| `source_lang` | string | Which language edition the record was taken from: `en`, `ru`, `th`, `fr`, `ar`, `es`. English is canonical; a language edition contributes a vehicle only where the English one has no page for it. Added in 2026.09.22 | `ru` |
 Empty strings mean "not published for this variant", not zero. Competition and centre-lock variants intentionally carry no `center_bore_mm`; a blank `center_bore_mm` on a road car means the figure is withheld pending verification (see the correction log).
 
 ## Quick start
@@ -67,6 +68,18 @@ Records are built from published OEM wheel and tyre specifications and cross-che
 `flush_wheel` and `max_wheel` are reference starting points collected from documented builds on each platform — they are **not** manufacturer approvals. Clearance always has to be verified on the individual car: brake package, suspension, tyre profile and ride height all change the outcome.
 
 ## Version history and correction log
+
+### 2026.09.22
+
+Expansion to the multilingual guides. Until now the dataset was built only from the English pages; this release adds the vehicles that exist only on the Russian, Thai, French, Arabic and Spanish editions — Lada, UAZ, Moskvich, Tenet, Belgee and Solaris for Russia and the CIS, the Thai pickup and body-on-frame range, Gulf and Latin-market variants, and recent Chinese export models.
+
+New column `source_lang` records which edition each record came from. English stays canonical: a language edition contributes a vehicle only where the English pages have none, so the same car is not published twice under two spellings. Matching normalises chassis codes and translated range words, so `Toyota Camry XV70` and `Camry`, or `BMW Serie 1 F20` and `BMW 1 Series F20`, resolve to one vehicle.
+
+Factory wheel size corrected (45 records): a source row can carry a width no wheel of that diameter is made in — 19x5.5J on a Chery Tiggo 7 Pro, 18x5.5J on a Geely Coolray, 21x7J on a Hongqi H9. Each was re-derived from the other listings for the same bolt pattern and centre bore, which describe the same vehicle under a different market's entry. One record with no plausible figure in any listing now carries no factory size rather than a wrong one.
+
+Offsets: where a source writes ET0 because the manufacturer never published an offset, the record is left blank instead. A zero offset on a front-wheel-drive hatchback is not a specification.
+
+Record count 7,603 → 9,688; makes 130 → 167; bolt patterns 46 → 52. By edition: en 7,918, ru 714, th 473, es 266, fr 206, ar 111.
 
 ### 2026.09.20
 
