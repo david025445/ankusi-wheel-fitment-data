@@ -1,12 +1,12 @@
 # ANKUSI Wheel Fitment Dataset
 
-Open, machine-readable factory wheel specifications — bolt pattern, centre bore, lug count and OE wheel size — for **9,688 vehicle variants** across **167 makes** and **52 bolt patterns**, model years **1940–2027**.
+Open, machine-readable factory wheel specifications — bolt pattern, centre bore, lug count and OE wheel size — for **9,701 vehicle variants** across **169 makes** and **53 bolt patterns**, model years **1940–2027**.
 
 Released under **CC BY 4.0**. Free to use, copy, adapt and build on, including commercially, as long as you credit the source.
 
 **Canonical page:** https://ankusiwheels.com/wheel-fitment-dataset/
 
-**Current version:** 2026.09.22 — see [Version history](#version-history-and-correction-log) below. below.
+**Current version:** 2026.10.04 — see [Version history](#version-history-and-correction-log) below.
 
 ---
 
@@ -68,6 +68,14 @@ Records are built from published OEM wheel and tyre specifications and cross-che
 `flush_wheel` and `max_wheel` are reference starting points collected from documented builds on each platform — they are **not** manufacturer approvals. Clearance always has to be verified on the individual car: brake package, suspension, tyre profile and ride height all change the outcome.
 
 ## Version history and correction log
+
+### 2026.10.04
+
+Make names normalised so each manufacturer appears under one spelling: 29 records listed under "Seat" now use "SEAT" and 6 records listed under "Great-wall-gwm" now use "GWM". No fitment values changed. 9,701 records, 169 makes, 53 bolt patterns.
+
+### 2026.10.02
+
+Rebuilt from the live fitment guides: 9,701 records and 53 bolt patterns, including the vehicles and corrections published since 22 September. This release counted 171 makes because two makes were listed under duplicate spellings, corrected in 2026.10.04.
 
 ### 2026.09.22
 
