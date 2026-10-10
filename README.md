@@ -32,7 +32,7 @@ A 50-row sample lives in `data/sample.csv` so you can check the shape before dow
 |---|---|---|---|
 | `make` | string | Vehicle manufacturer | `BMW` |
 | `model` | string | Model name as published, including chassis code where one applies | `BMW 3 Series G20` |
-| `year` | integer | Model year the record describes | `2025` |
+| `year` | integer or range | Model year the record describes, or a year range (e.g. `2016-2020`) where one guide covers a whole generation; 151 records carry a range | `2025` |
 | `chassis_code` | string | Manufacturer chassis / platform code where published | `G20` |
 | `bolt_pattern` | string | Bolt circle: stud count × pitch circle diameter in mm | `5x112` |
 | `center_bore_mm` | decimal | Hub bore diameter in millimetres (front hub where the axles differ) | `66.6` |
