@@ -77,6 +77,8 @@ Where a model carries a different bolt pattern in another market, the market is 
 
 Record count 9,701 → 10,070; makes 169 → 174; bolt patterns 53 → 56. By edition: en 8,273, ru 746, th 473, es 261, fr 206, ar 111.
 
+Correction (same day): 157 `max_wheel` values whose negative offset had been cut to a bare `ET` by the export (e.g. Brabus Crawler 20x11.0J ET-20, BMW 3.0 CSL E9 rear ET-5) now carry the full figure. The export regex treated the minus sign as a sentence delimiter; fixed at source.
+
 ### 2026.10.04
 
 Make names normalised so each manufacturer appears under one spelling: 29 records listed under "Seat" now use "SEAT" and 6 records listed under "Great-wall-gwm" now use "GWM". No fitment values changed. 9,701 records, 169 makes, 53 bolt patterns.
