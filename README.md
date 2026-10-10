@@ -1,12 +1,12 @@
 # ANKUSI Wheel Fitment Dataset
 
-Open, machine-readable factory wheel specifications — bolt pattern, centre bore, lug count and OE wheel size — for **9,701 vehicle variants** across **169 makes** and **53 bolt patterns**, model years **1940–2027**.
+Open, machine-readable factory wheel specifications — bolt pattern, centre bore, lug count and OE wheel size — for **10,070 vehicle variants** across **174 makes** and **56 bolt patterns**, model years **1940–2027**.
 
 Released under **CC BY 4.0**. Free to use, copy, adapt and build on, including commercially, as long as you credit the source.
 
 **Canonical page:** https://ankusiwheels.com/wheel-fitment-dataset/
 
-**Current version:** 2026.10.04 — see [Version history](#version-history-and-correction-log) below.
+**Current version:** 2026.10.10 — see [Version history](#version-history-and-correction-log) below.
 
 ---
 
@@ -20,8 +20,8 @@ Full data files are hosted on the canonical page so they always match the publis
 
 | File | Format | Size | Download |
 |---|---|---|---|
-| `ankusi-wheel-fitment.csv` | CSV, UTF-8 with BOM | ~1.1 MB | https://ankusiwheels.com/wp-content/uploads/dataset/ankusi-wheel-fitment.csv |
-| `ankusi-wheel-fitment.json` | JSON + metadata + changelog | ~2.4 MB | https://ankusiwheels.com/wp-content/uploads/dataset/ankusi-wheel-fitment.json |
+| `ankusi-wheel-fitment.csv` | CSV, UTF-8 with BOM | ~1.7 MB | https://ankusiwheels.com/wp-content/uploads/dataset/ankusi-wheel-fitment.csv |
+| `ankusi-wheel-fitment.json` | JSON + metadata + changelog | ~3.6 MB | https://ankusiwheels.com/wp-content/uploads/dataset/ankusi-wheel-fitment.json |
 | `CHANGELOG.json` | JSON | small | https://ankusiwheels.com/wp-content/uploads/dataset/CHANGELOG.json |
 
 A 50-row sample lives in `data/sample.csv` so you can check the shape before downloading.
@@ -42,8 +42,8 @@ A 50-row sample lives in `data/sample.csv` so you can check the shape before dow
 | `flush_wheel` | string | Commonly used flush-fitment reference size and offset | `19x8.5J ET35` |
 | `max_wheel` | string | Maximum aggressive reference size and offset before clearance work | `19x9.0J ET28` |
 | `source_url` | string | Canonical page the record is published on | `https://ankusiwheels.com/fitment-guide/bmw-3-series-g20-2025/` |
-
 | `source_lang` | string | Which language edition the record was taken from: `en`, `ru`, `th`, `fr`, `ar`, `es`. English is canonical; a language edition contributes a vehicle only where the English one has no page for it. Added in 2026.09.22 | `ru` |
+
 Empty strings mean "not published for this variant", not zero. Competition and centre-lock variants intentionally carry no `center_bore_mm`; a blank `center_bore_mm` on a road car means the figure is withheld pending verification (see the correction log).
 
 ## Quick start
@@ -68,6 +68,14 @@ Records are built from published OEM wheel and tyre specifications and cross-che
 `flush_wheel` and `max_wheel` are reference starting points collected from documented builds on each platform — they are **not** manufacturer approvals. Clearance always has to be verified on the individual car: brake package, suspension, tyre profile and ride height all change the outcome.
 
 ## Version history and correction log
+
+### 2026.10.10
+
+Expansion: 369 vehicle variants added across 47 makes after two-source verification (avtoreference.com + tirewheelguide.com, or tirewheelguide.com + wheel-size.com; bolt pattern and centre bore must agree on both). Focus of this release: Volkswagen (Arteon, Teramont, T-Cross, Taos, Taigun, ID. Buzz, Amarok I/II, Scirocco, Beetle, Transporter T5–T7, Multivan, Caddy, Touran, Sharan, CC, Virtus, Nivus, Lamando, Sagitar, Magotan, Bora [CN], Lavida, Phaeton, Up, Vento [IN]), Lynk & Co 02/03/05/06/08/09/900/Z10, Proton Saga/X70/X50/Persona, Suzuki Baleno/SX4/Fronx/Grand Vitara, Toyota Harrier/Aristo/Land Cruiser 70, Renault Trafic/Master, Ram 3500/ProMaster/Rampage, Pontiac, Saturn, Mahindra XUV300/XUV 3XO, Rivian R1S, VinFast VF8/VF9, Polestar 3, Maybach S-Class/GLS, Ferrari F12, Daewoo, Plymouth Prowler/Neon, Lada 4x4, and several Chinese makes (XPeng G7, Xiaomi YU7, NIO ES8/ES7, IM LS6, Deepal L07, Hongqi HQ9, Ora 07, BAIC BJ60/BJ80, iCar V23, Forthing, JAC T8/T9, Borgward, HiPhi Z).
+
+Where a model carries a different bolt pattern in another market, the market is suffixed in the model name (`[CN]`, `[IN]`, `[JP]`). `flush_wheel` and `max_wheel` are blank for every new record: no verified aftermarket figures exist yet, and the dataset never guesses them.
+
+Record count 9,701 → 10,070; makes 169 → 174; bolt patterns 53 → 56. By edition: en 8,273, ru 746, th 473, es 261, fr 206, ar 111.
 
 ### 2026.10.04
 
@@ -172,6 +180,8 @@ The same dataset, published elsewhere for convenience:
 - Hugging Face (dataset viewer, `datasets` loader): https://huggingface.co/datasets/hjhjhihg1/ankusi-wheel-fitment-data
 - Kaggle (column documentation, notebook-ready): https://www.kaggle.com/datasets/ankusiwheelsdavid/wheel-bolt-pattern-and-centre-bore-6436-cars
 - figshare (permanent DOI, citable in papers): https://doi.org/10.6084/m9.figshare.33921994
+- Zenodo (DOI, versioned): https://doi.org/10.5281/zenodo.23241521
+- Internet Archive: https://archive.org/details/ankusi-wheel-fitment-openml
 - Wikidata item: https://www.wikidata.org/wiki/Q141498663
 
 ## Who maintains this
